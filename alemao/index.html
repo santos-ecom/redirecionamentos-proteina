@@ -2,10 +2,21 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://forseniors.shop/pages/proteina-alemao">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecionando...</title>
 </head>
 <body>
-  <script>window.location.replace("https://forseniors.shop/pages/proteina-alemao");</script>
+  <script>
+    (function() {
+      var destUrl = "https://forseniors.shop/pages/proteina-alemao";
+      var currentParams = window.location.search;
+      if (currentParams) {
+        // Check if destination already has query params
+        var separator = destUrl.indexOf("?") !== -1 ? "&" : "?";
+        destUrl = destUrl + separator + currentParams.substring(1);
+      }
+      window.location.replace(destUrl);
+    })();
+  </script>
 </body>
 </html>
